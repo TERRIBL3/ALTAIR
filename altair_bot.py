@@ -40,6 +40,7 @@ async def on_message(message):
 		pfp = requests.get("https://www.xvideos.com"+(str(dicionario['iu'])))
 		embed = discord.Embed(
 			title = 'Comentário do Xvideos',
+			color = 0xed2d2d,
 			description= '**Data:** '+'`'+str(dicionario['d'])+'`'+'\n\n**Título:** '+'`'+ str(dicionario['titulo'])+'`'+'\n\n**Usuário:** '+'`'+str(dicionario['p'])+'`'+
 			'\n\n**Comentário:** '+'`'+str(html.unescape(str(dicionario['c'])))+'`'
 			)
@@ -53,6 +54,7 @@ async def on_message(message):
 		resultado = dolar_func()
 		embed = discord.Embed(
 			title = 'Preço do dolar',
+			color = 0x33cc33,
 			description = '**Dolar comercial:** '+'`'+str(resultado['Dólar comercial'])+'`'+'\n\n**Dolar turismo:** '+'`'+str(resultado['Dólar turismo'])+'`'+
 			'\n\n**Dolar ptax:** '+'`'+str(resultado['Dólar ptax'])+'`'+'\n\n**Euro comercial:** '+'`'+str(resultado['Euro comercial'])+'`'+'\n\n**Euro turismo:** '+'`'+str(resultado['Euro turismo'])+'`'+'\n\n'
 			)
@@ -64,6 +66,7 @@ async def on_message(message):
 	if message.content.lower().startswith('{}bitcoin'.format(prefix)):
 		embed = discord.Embed(
 			title = 'Valor do bitcoin',
+			color = 0xffff00,
 			description = '**'+str(bitcoin_func())+'**'
 			)
 		embed.set_footer(
