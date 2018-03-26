@@ -1,12 +1,15 @@
-import discord
-import asyncio
-from scraping_xvideos import pega_comments
+import os
 import html
+
 import requests
+import discord
+from discord.ext.commands import Bot
+
 from dolar import dolar_func
 from bitcoin import bitcoin_func
 client = discord.Client()
 prefix = '|'
+from scraping_xvideos import pega_comments
 
 @client.event
 async def on_ready():
