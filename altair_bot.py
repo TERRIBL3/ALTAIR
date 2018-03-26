@@ -10,7 +10,7 @@ from bitcoin import bitcoin_func
 from scraping_xvideos import pega_comments
 
 bot = Bot(command_prefix='|')
-TOKEN = os.environ['TOKEN']
+TOKEN = os.environ.get('TOKEN')
 
 
 @bot.event
@@ -95,4 +95,4 @@ async def bitcoin(ctx):
 	return await bot.send_message(ctx.message.channel, embed=embed)
 
 
-bot.run(TOKEN)
+bot.run(TOKEN) if TOKEN else print("Token bot not loaded in the environment variables!")
