@@ -41,10 +41,8 @@ def pega_comments():
 				dict_end = lista[random.randint(1,len(lista))-1]
 				dict_end['titulo'] = escolhido
 			dict_end['titulo'] = escolhido
-			#print('https://www.xvideos.com/video-get-comments/'+str(titulo_link[escolhido][6:14])+'/0')
-			#return dict_end
-			print(dict_end)
+			dict_end['link'] = 'www.xvideos.com'+str(titulo_link[escolhido])
+			return dict_end
 			break
 		except:
 			pass
-pega_comments()
