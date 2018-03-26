@@ -1,0 +1,15 @@
+aiohttp>=1.0.5
+async-timeout>=2.0.1
+beautifulsoup4>=4.6.0
+bs4>=0.0.1
+certifi>=2018.1.18
+chardet>=3.0.4
+discord.py>=0.16.12
+idna>=2.6
+multidict>=4.1.0
+pip>=9.0.3
+requests>=2.18.4
+setuptools>=39.0.1
+urllib3>=1.22
+websockets>=3.4
+wheel>=0.30.0
