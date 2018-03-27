@@ -49,7 +49,7 @@ async def help(ctx):
 		return await bot.send_message(ctx.message.channel, embed=embed)
 
 	except:
-		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>','Deu erro :weary')
+		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>' + 'Deu erro :weary:')
 
 
 @bot.command(pass_context=True)
@@ -72,7 +72,7 @@ async def xvideos(ctx):
 
 		return await bot.send_message(ctx.message.channel,'<@'+ctx.message.author.id+'>', embed=embed )
 	except:
-		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>','Deu erro :weary')
+		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>' + 'Deu erro :weary:')
 
 
 @bot.command(pass_context=True)
@@ -92,7 +92,7 @@ async def dolar(ctx):
 
 		return await bot.send_message(ctx.message.channel, embed=embed)
 	except:
-		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>','Deu erro :weary')
+		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>' + 'Deu erro :weary:')
 
 
 @bot.command(pass_context=True)
@@ -109,7 +109,7 @@ async def bitcoin(ctx):
 
 		return await bot.send_message(ctx.message.channel, embed=embed)
 	except:
-		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>','Deu erro :weary')
+		return await bot.send_message(ctx.message.channel, '<@'+ctx.message.author.id+'>' + 'Deu erro :weary:')
 
 
 @bot.command(pass_context=True)
