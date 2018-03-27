@@ -113,7 +113,7 @@ async def bitcoin(ctx):
 
 
 @bot.command(pass_context=True)
-async def tocar(ctx,*musica):
+async def tocar(ctx, *, musica):
 	try:
 		channel = ctx.message.author.voice_channel
 		connect_instance = await bot.join_voice_channel(channel)
