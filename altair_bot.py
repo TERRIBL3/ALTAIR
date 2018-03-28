@@ -5,10 +5,10 @@ import requests
 import discord
 from discord.ext.commands import Bot
 
-from dolar import dolar_func
-from bitcoin import bitcoin_func
-from scraping_xvideos import pega_comments
-from marquinho_de_marco import pesquisar
+from utils.dolar import dolar_func
+from utils.bitcoin import bitcoin_func
+from utils.scraping_xvideos import pega_comments
+from utils.marquinho_de_marco import pesquisar
 
 bot = Bot(command_prefix='|')
 TOKEN = os.environ.get('TOKEN')
