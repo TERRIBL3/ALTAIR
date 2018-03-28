@@ -1,13 +1,10 @@
+from urllib.parse import quote_plus
 import requests
-from bs4 import BeautifulSoup as bs 
+from bs4 import BeautifulSoup as bs
 
-def pesquisar(*music):
-	string = ''
-	for i in music:
-		string = ''.join(i)
-	string = string.replace(' ','+')
-	pagina = requests.get('https://www.youtube.com/results?search_query='+str(string))
-	soup_pagina = bs(pagina.text,'html.parser')
+def pesquisar(music):
+	pagina = requests.get('https://www.youtube.com/results?search_query=' + quote_plus(music))
+	soup_pagina = bs(pagina.text, 'html.parser')
 	soup = soup_pagina.select('h3 a')
 	titulo_link = {}
 	for link in soup:
