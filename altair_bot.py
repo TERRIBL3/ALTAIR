@@ -118,9 +118,9 @@ async def tocar(ctx, *, musica):
 		channel = ctx.message.author.voice_channel
 		connect_instance = await bot.join_voice_channel(channel)
 		musica_escolhida = pesquisar(musica)
-		player = await connect_instance.create_ytdl_player('https://www.youtube.com' + musica_escolhida['song'])
+		player = await connect_instance.create_ytdl_player('https://www.youtube.com' + musica_escolhida)
 		player.start()
-		await bot.send_message(ctx.message.channel,'**A tocar:** {}\n\n'.format('https://www.youtube.com' + musica_escolhida['song']))
+		await bot.send_message(ctx.message.channel,'**A tocar:** {}\n\n'.format('https://www.youtube.com' + musica_escolhida))
 		if player.is_done():
 			player.stop()
 			for canal in bot.voice_clients:
@@ -135,8 +135,8 @@ async def tocar(ctx, *, musica):
 @bot.command(pass_context=True)
 async def sair(ctx):
 	for canal in bot.voice_clients:
-			if canal.server == ctx.message.server:
-				await canal.disconnect()
+		if canal.server == ctx.message.server:
+			await canal.disconnect()
 	return await bot.send_message(ctx.message.channel, 'Eu não to conectada a canal nenhum carai')
 
 
